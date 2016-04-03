@@ -12,6 +12,6 @@ function __autoload($class){
     endforeach;
 
     if(!$iDir):
-        trigger_error('Não foi possivel incluir a classe', E_USER_ERROR);
+        trigger_error("Não foi possivel incluir a classe {$class}", E_USER_ERROR);
     endif;
 }

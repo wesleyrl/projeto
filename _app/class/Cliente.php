@@ -2,11 +2,14 @@
 
 class Cliente
 {
-    private $Nome;
-    private $Email;
-    private $Telefone;
-    private $Endereco;
-    private $Cpf;
+    private $nome;
+    private $email;
+    private $telefone;
+    private $endereco;
+    private $cidade;
+    private $estado;
+    private $categoria;
+
 
 
     /**
@@ -15,15 +18,16 @@ class Cliente
      * @param $email
      * @param $telefone
      * @param $endereco
-     * @param $cpf
      */
-    function __construct($nome, $email, $telefone, $endereco, $cpf)
+    function __construct($nome, $email, $telefone, $endereco, $cidade, $estado, $categoria)
     {
-        $this->Nome = (string)$nome;
-        $this->Email = (string)$email;
-        $this->Telefone = (string)$telefone;
-        $this->Endereco = (string)$endereco;
-        $this->Cpf =(int)$cpf;
+        $this->nome = (string)$nome;
+        $this->email = (string)$email;
+        $this->telefone = (string)$telefone;
+        $this->endereco = (string)$endereco;
+        $this->cidade = (string)$cidade;
+        $this->estado = (string)$estado;
+        $this->categoria = (string)$categoria;
     }
 
     /**
@@ -31,7 +35,7 @@ class Cliente
      */
     public function getNome()
     {
-        return $this->Nome;
+        return $this->nome;
     }
 
     /**
@@ -39,7 +43,7 @@ class Cliente
      */
     public function getEmail()
     {
-        return $this->Email;
+        return $this->email;
     }
 
     /**
@@ -47,7 +51,7 @@ class Cliente
      */
     public function getTelefone()
     {
-        return $this->Telefone;
+        return $this->telefone;
     }
 
     /**
@@ -55,7 +59,7 @@ class Cliente
      */
     public function getEndereco()
     {
-        return $this->Endereco;
+        return $this->endereco;
     }
 
     /**
@@ -63,7 +67,55 @@ class Cliente
      */
     public function getCpf()
     {
-        return $this->Cpf;
+        return $this->cpf;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCidade()
+    {
+        return $this->cidade;
+    }
+
+    /**
+     * @param string $cidade
+     */
+    public function setCidade($cidade)
+    {
+        $this->cidade = $cidade;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEstado()
+    {
+        return $this->estado;
+    }
+
+    /**
+     * @param string $estado
+     */
+    public function setEstado($estado)
+    {
+        $this->estado = $estado;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCategoria()
+    {
+        return $this->categoria;
+    }
+
+    /**
+     * @param string $categoria
+     */
+    public function setCategoria($categoria)
+    {
+        $this->categoria = $categoria;
     }
 
 
